@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Router, Route, Link, hashHistory, IndexRoute, Redirect, IndexLink} from 'react-router';
+import { myRoman, myWuxin } from './roman.js';
 
 // 引入Antd的导航组件
 import { Menu, Icon } from 'antd';
@@ -77,6 +78,8 @@ class Sider extends React.Component {
                         <SubMenu key="sub1" title={<span><Icon type="bars" /><span>主导航</span></span>}>
                             <Menu.Item key="1"><Link to="/myTable">表格</Link></Menu.Item>
                             <Menu.Item key="2"><Link to="/myForm">表单</Link></Menu.Item>
+                            <Menu.Item key="3"><Link to="/myRoman">Roman</Link></Menu.Item>
+                            <Menu.Item key="4"><Link to="/myWuxin">Wuxin</Link></Menu.Item>
                         </SubMenu>
                     </Menu>
                 </div>
@@ -104,6 +107,8 @@ ReactDom.render((
             <Route path="myIntroduce" component={myIntroduce} />
             <Route path="myTable" component={myTable} />
             <Route path="myForm" component={myForm} />
+            <Route path="myRoman" component={myRoman} />
+            <Route path="myWuxin" component={myWuxin} />
         </Route>
     </Router>
 ), document.getElementById('app'));
